@@ -1,0 +1,105 @@
+#booth-forum-link-helper {
+  margin: 0 !important;
+}
+
+.booth-forum-link-container {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  gap: 0;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 100%;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.booth-forum-link-separator {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  background: #e5e5e5;
+}
+
+.booth-forum-link-container > #booth-forum-link-helper {
+  flex: 0 1 auto;
+  width: min(312px, calc(100% - 48px)) !important;
+  max-width: 312px !important;
+  min-width: 0 !important;
+  min-height: 54px !important;
+  padding: 0 10px !important;
+  border: 0 !important;
+  border-radius: 27px 0 0 27px !important;
+  background: #ff5b68 !important;
+  color: #fff !important;
+  overflow: hidden !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+.booth-forum-link-single > #booth-forum-link-helper {
+  width: min(360px, 100%) !important;
+  max-width: 360px !important;
+  border-radius: 27px !important;
+}
+
+.booth-forum-link-arrow {
+  flex: 0 0 40px;
+  width: 40px !important;
+  min-width: 40px !important;
+  min-height: 54px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-left: 2px solid rgb(255 255 255 / 72%) !important;
+  border-radius: 0 27px 27px 0 !important;
+  background: #ff5b68 !important;
+  color: #fff !important;
+  cursor: pointer;
+  font-size: 25px !important;
+  line-height: 1 !important;
+}
+
+.booth-forum-link-container,
+.booth-forum-link-container * {
+  box-sizing: border-box;
+}
+
+.booth-forum-link-menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  right: 0;
+  display: grid;
+  min-width: 260px;
+  padding: 6px;
+  border: 1px solid #20c997;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+}
+
+.booth-forum-link-menu a {
+  padding: 8px 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.booth-forum-link-menu a:hover {
+  background: rgb(32 201 151 / 14%);
+}
+
+#booth-forum-link-helper:disabled {
+  cursor: default;
+  opacity: .72;
+}
+
+#booth-forum-link-helper.booth-forum-link-loading:disabled {
+  cursor: wait;
+}

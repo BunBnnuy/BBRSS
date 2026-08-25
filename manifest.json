@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "BB's RS Searcher",
+  "version": "0.1.0",
+  "description": "Easy and unintrusive search",
+  "icons": {
+    "16": "bbrss_16.png",
+    "32": "bbrss_32.png",
+    "48": "bbrss_48.png",
+    "128": "bbrss_128.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Toggle BB's RS Searcher"
+  },
+  "host_permissions": [
+    "https://forum.ripper.store/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://booth.pm/*", "https://*.booth.pm/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
